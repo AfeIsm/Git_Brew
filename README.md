@@ -16,6 +16,7 @@ A real-time monitoring dashboard for potion factory operations with AI-powered i
 ## Tech Stack
 
 - **Framework**: Next.js 16.0.0
+- **UI Library**: React 19.2.0
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **AI**: Google Gemini API
@@ -161,4 +162,3 @@ gitBrew/
 - Volume over time visualization
 - Interactive tooltips with detailed information
 - Static axes for consistent viewing
-
