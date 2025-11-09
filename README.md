@@ -63,19 +63,69 @@ npm run dev
 
 ```
 gitBrew/
-├── app/                    # Next.js app directory
-│   ├── api/               # API routes
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Main dashboard page
-├── components/            # React components
-│   ├── ai-assistant.tsx   # AI assistant widget
-│   ├── cauldron-map.tsx  # Network map visualization
-│   └── ui/               # UI components
-├── data/                  # JSON data files
-├── hooks/                 # Custom React hooks
-├── lib/                   # Utility functions
-└── public/                # Static assets
+├── app/                           # Next.js app directory
+│   ├── api/                       # API routes
+│   │   ├── cauldron-levels/       # Cauldron level data endpoint
+│   │   ├── config/                # Configuration endpoint
+│   │   ├── elevenlabs/            # ElevenLabs TTS API
+│   │   ├── gemini/                # Gemini AI endpoints
+│   │   │   ├── data-query/        # Natural language data queries
+│   │   │   ├── help/              # Contextual help
+│   │   │   ├── insights/          # AI insights
+│   │   │   ├── predict/           # Predictive analytics
+│   │   │   ├── translate/         # Multi-language support
+│   │   │   └── route.ts           # Main Gemini chat endpoint
+│   │   └── transport-tickets/     # Transport ticket data
+│   ├── globals.css                # Global styles with background image
+│   ├── layout.tsx                 # Root layout component
+│   └── page.tsx                   # Main dashboard page
+├── components/                     # React components
+│   ├── ai-assistant.tsx           # AI assistant floating widget
+│   ├── cauldron-grid.tsx          # Cauldron grid display
+│   ├── cauldron-map.tsx           # Network map visualization
+│   ├── contextual-help.tsx        # Contextual help component
+│   ├── data-query.tsx             # Natural language data query UI
+│   ├── discrepancy-panel.tsx      # Discrepancy detection panel
+│   ├── historical-playback.tsx    # Historical data charts
+│   ├── language-selector.tsx     # Language selection component
+│   ├── predictive-analytics.tsx  # Predictive analytics component
+│   ├── route-optimizer.tsx        # Route optimization component
+│   ├── smart-alerts.tsx           # Smart alerts component
+│   ├── theme-provider.tsx         # Theme provider
+│   └── ui/                        # Reusable UI components (50+ components)
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── chart.tsx
+│       ├── dialog.tsx
+│       ├── input.tsx
+│       ├── select.tsx
+│       ├── tabs.tsx
+│       └── ... (many more UI components)
+├── data/                          # JSON data files
+│   ├── config.json                # Factory configuration
+│   ├── timestamps.json            # Historical cauldron levels
+│   └── transport-tickets.json     # Transport ticket data
+├── hooks/                         # Custom React hooks
+│   ├── use-cauldron-data.ts      # Cauldron data fetching hook
+│   ├── use-historical-data.ts     # Historical data hook
+│   ├── use-mobile.ts              # Mobile detection hook
+│   └── use-toast.ts               # Toast notification hook
+├── lib/                           # Utility functions
+│   └── utils.ts                   # Utility functions
+├── public/                        # Static assets
+│   ├── Git Brewed.png             # Logo image
+│   ├── icon.png                   # Favicon
+│   └── IMG_6252.jpeg              # Background image
+├── scripts/                       # Build scripts
+│   └── generate-cauldron-data.ts  # Data generation script
+├── types/                         # TypeScript type definitions
+│   └── cauldron.ts                # Cauldron-related types
+├── components.json                 # Component configuration
+├── next.config.mjs                # Next.js configuration
+├── package.json                   # Dependencies
+├── postcss.config.mjs             # PostCSS configuration
+├── tsconfig.json                  # TypeScript configuration
+└── README.md                      # This file
 ```
 
 ## API Keys Setup
@@ -112,18 +162,3 @@ gitBrew/
 - Interactive tooltips with detailed information
 - Static axes for consistent viewing
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[Add your license here]
-
-## Author
-
-MeddyT
-
----
-
-*Built with ❤️ for potion factory monitoring*
